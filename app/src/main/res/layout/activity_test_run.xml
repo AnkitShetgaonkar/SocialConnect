@@ -4,44 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".samplecode.TestRunActivity">
-
-    <Button
-        android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:padding="5dp"
-        android:textStyle="bold"
-        android:id="@+id/btnFb"
-        android:text="Facebook" />
-
-
-
-    <Button
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:padding="5dp"
-        android:textStyle="bold"
-        android:id="@+id/btnGoogle"
-        android:text="Google" />
-
-
-
-    <Button
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:padding="5dp"
-        android:textStyle="bold"
-        android:id="@+id/btnTwt"
-        android:text="Twitter" />
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/login_button"
@@ -51,7 +15,19 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"/>
 
+    <com.google.android.gms.common.SignInButton
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
+    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:layout_marginTop="10dp"
+        android:id="@+id/twitter_login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        />
 
 
 </LinearLayout>

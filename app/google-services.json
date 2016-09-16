@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "262141347221",
+    "project_id": "socialconnect-143606"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262141347221:android:a72efae5d9aaafdf",
+        "android_client_info": {
+          "package_name": "com.ankdroid.socialconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262141347221-okd419bb70cg8vtmlo3ofb9ggtq0pvc1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ankdroid.socialconnect",
+            "certificate_hash": "C5ECBF4A7CC4C1530A71FEED7E16F5E3A1D12207"
+          }
+        },
+        {
+          "client_id": "262141347221-0komcnlbbd30f17610c8pvd7ujr5iliq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY0mIWWv6FnfyD78vhG33g7_inDUNyveI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
