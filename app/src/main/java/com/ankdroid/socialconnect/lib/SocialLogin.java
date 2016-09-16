@@ -20,18 +20,18 @@ public class SocialLogin {
 
 
     private static SocialLogin mSocialLogin;
-    private static CallbackManager callbackManager;
     private Context mContext;
 
     private static final String TAG = SocialLogin.class.getSimpleName();
 
     /**
      * singleton reference
+     *
      * @param context
      * @return
      */
-    public static SocialLogin getInstance(Context context){
-        if(mSocialLogin == null){
+    public static SocialLogin getInstance(Context context) {
+        if (mSocialLogin == null) {
             mSocialLogin = new SocialLogin(context);
         }
         return mSocialLogin;
@@ -40,6 +40,7 @@ public class SocialLogin {
 
     /**
      * constructor
+     *
      * @param context
      */
     private SocialLogin(Context context) {
@@ -51,48 +52,54 @@ public class SocialLogin {
     }
 
 
-
-     /**
-     * logs in to facebook, should implement callback to receive info
+    /**
+     * logs in to facebook, should implement callback to receive info, returns the @callbackManager
+     * reference to be used in onActivityResult of the calling Activity
+     *
      * @param fbBtn
+     * @return callbackManager
      */
-    public void fbLogin(LoginButton fbBtn){
-        callbackManager = CallbackManager.Factory.create();
+    public CallbackManager fbLogin(LoginButton fbBtn) {
+        CallbackManager callbackManager = CallbackManager.Factory.create();
         fbBtn.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                Log.d(TAG,"Successfully logged in");
+                Log.d(TAG, "Successfully logged in");
                 Toast.makeText(mContext, "Success", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onCancel() {
-                Log.d(TAG,"Canceled logged in");
+                Log.d(TAG, "Canceled logged in");
                 Toast.makeText(mContext, "cancel", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onError(FacebookException e) {
-                Log.d(TAG,"There was some issue with fb login");
+                Log.d(TAG, "There was some issue with fb login");
                 Toast.makeText(mContext, "error", Toast.LENGTH_SHORT).show();
             }
 
-            });
+        });
+
+        return callbackManager;
     }
 
     /**
      * logs in to google, should implement callback to receive info
+     *
      * @param context
      */
-    public void googleLogin(Context context){
+    public void googleLogin(Context context) {
 
     }
 
     /**
      * logs in to twitter, should implement callback to receive info
+     *
      * @param context
      */
-    public static void twtLogin(Context context){
+    public static void twtLogin(Context context) {
 
     }
 
